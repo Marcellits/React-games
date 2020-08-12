@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./TicTacToe.css";
+import "../styles/TicTacToe.css";
 
 function TicTacToe() {
   const emptyBoard = [" ", " ", " ", " ", " ", " ", " ", " ", " "];
@@ -15,7 +15,7 @@ function TicTacToe() {
 
     setBoard(
       //bringing the previous clicks results each time current
-      //player click in a new board
+      //player clicks in a new board
       board.map((item, itemIndex) =>
         itemIndex === index ? currentPlayer : item
       )
@@ -28,14 +28,17 @@ function TicTacToe() {
   const checkWinner = () => {
     //8 ways to win this game:
     const waysToWin = [
+      //horizontal
       [board[0], board[1], board[2]],
       [board[3], board[4], board[5]],
       [board[6], board[7], board[8]],
 
+      //vertical
       [board[0], board[3], board[6]],
       [board[1], board[4], board[7]],
       [board[2], board[5], board[8]],
 
+      //diagonal
       [board[0], board[4], board[8]],
       [board[2], board[4], board[6]],
     ];
@@ -44,14 +47,16 @@ function TicTacToe() {
     waysToWin.forEach((cells) => {
       if (cells.every((cell) => cell === "O")) setWinner("O");
       if (cells.every((cell) => cell === "X")) setWinner("X");
+
+      checkDraw();
     });
-    checkTie();
   };
-
-  const checkTie = () => {
-    if (board.every((item) => item !== " ")) setWinner("T"); //Tie
+  const checkDraw = () => {
+    if (board.every((cell) => cell !== " ")) {
+      console.log("hey checkdraw?");
+      setWinner("D");
+    }
   };
-
   //only call winner when state has changed
   useEffect(checkWinner, [board]);
 
@@ -77,9 +82,9 @@ function TicTacToe() {
       </div>
       {winner && (
         <div className="footer">
-          {winner === "T" ? (
+          {winner === "D" ? (
             <h2 className="winner-message">
-              <span className={winner}>Tie!</span>
+              <span className={winner}>Draw!</span>
             </h2>
           ) : (
             <h2 className="winner-message">
@@ -95,4 +100,3 @@ function TicTacToe() {
 }
 
 export default TicTacToe;
-//ksjflskdfls
