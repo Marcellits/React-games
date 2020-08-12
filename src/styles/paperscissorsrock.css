@@ -1,0 +1,33 @@
+.container_psr_options {
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
+  gap: 2rem;
+}
+.psr_option {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #00000066;
+  cursor: pointer;
+  height: 30vh;
+}
+
+img {
+  display: table-cell;
+  vertical-align: middle;
+  width: 20vw;
+  height: auto;
+  padding: 20px;
+}
+#paper {
+  background-color: blue;
+}
+#scissors {
+  background-color: yellow;
+}
+#rock {
+  background-color: red;
+}
