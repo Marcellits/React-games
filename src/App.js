@@ -1,14 +1,21 @@
 import React from "react";
-import logo from "./logo.svg";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
-import TicTacToe from "./TicTacToe";
+import Home from "./components/Home";
+import TicTacToe from "./components/TicTacToe";
+import PaperScissorsRock from "./components/PaperScissorsRock.jsx";
 
 function App() {
   return (
-    <div className="App">
-      REACT GAMES!
-      <TicTacToe />
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/tictactoe" component={TicTacToe} />
+        <Route path="/paperscissorsrock" component={PaperScissorsRock} />
+      </Switch>
+    </Router>
   );
 }
 
