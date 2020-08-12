@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Home from "./components/Home";
 import TicTacToe from "./components/TicTacToe";
-import PaperScissorsRock from "./components/PaperScissorsRock.jsx";
+import RockPaperScissors from "./components/RockPaperScissors.jsx";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
           <Home />
         </Route>
         <Route path="/tictactoe" component={TicTacToe} />
-        <Route path="/paperscissorsrock" component={PaperScissorsRock} />
+        <Route path="/paperscissorsrock" component={RockPaperScissors} />
       </Switch>
     </Router>
   );

@@ -1,0 +1,50 @@
+.container_psr_options {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  gap: 2rem;
+}
+.psr_option {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: rgb(33, 33, 38);
+  cursor: pointer;
+  height: 25vh;
+  background-color: rgb(67, 206, 252);
+}
+.title_psr_option {
+  padding: 20px;
+  text-align: center;
+  font-size: 40px;
+}
+.psr_option:hover {
+  box-shadow: 1px 1px 10px grey;
+}
+
+img {
+  display: table-cell;
+  vertical-align: top;
+  height: 15vh;
+  padding: 20px;
+}
+#option_rock {
+  background: url("../images/rock.png");
+  /* background-color: rgb(67, 206, 252); */
+}
+#paper {
+  background-color: yellow;
+}
+#scissors {
+  background-color: rgb(255, 38, 0);
+}
+.option {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: rgb(33, 33, 38);
+  height: 25vh;
+}
