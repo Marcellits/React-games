@@ -12,13 +12,6 @@
   box-shadow: 1px 1px 10px grey;
 }
 
-.title {
-  text-align: center;
-  font-size: 3rem;
-  color: #555;
-  margin-bottom: 2rem;
-}
-
 .board {
   display: grid;
   grid-template-columns: repeat(3, 240px);
@@ -70,4 +63,3 @@ button {
   font-size: 2rem;
   font-weight: bold;
 }
-/* lksdfsldflskdflskjdklfjs */
