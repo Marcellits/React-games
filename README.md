@@ -1,6 +1,6 @@
 # React Games!
 
-**_Description_**
+**_Description_**.       
 This frontend project is an web application with well known games: TIC TAC TOE, PAPER SCISSORS ROCK and SNAKE. All of them are built using JavaScript + REACT.
 
 ### Installation
