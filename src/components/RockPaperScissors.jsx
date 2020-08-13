@@ -67,7 +67,7 @@ function RockPaperScissors() {
 
   return (
     <div>
-      <h1 className="title">Paper Scissors Rock</h1>
+      <h1 className="title">Rock Paper Scissors</h1>
       <div>
         Choose one!
         <div className="container_psr_options">

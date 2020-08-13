@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../styles/TicTacToe.css";
 
 function TicTacToe() {
-  const emptyBoard = [" ", " ", " ", " ", " ", " ", " ", " ", " "];
+  const emptyBoard = ["", "", "", "", "", "", "", "", ""];
   const [board, setBoard] = useState(emptyBoard);
   const [currentPlayer, setCurrentPlayer] = useState("X");
   const [winner, setWinner] = useState(null);
@@ -11,7 +11,7 @@ function TicTacToe() {
     //check if the game already has a winner
     if (winner) return null;
     //check if the board is already clicked before
-    if (board[index] !== " ") return null;
+    if (board[index] !== "") return null;
 
     setBoard(
       //bringing the previous clicks results each time current
@@ -47,16 +47,31 @@ function TicTacToe() {
     waysToWin.forEach((cells) => {
       if (cells.every((cell) => cell === "O")) setWinner("O");
       if (cells.every((cell) => cell === "X")) setWinner("X");
-
-      checkDraw();
     });
   };
+
+  //Rey's solution for the loop above
+
+  //   for (let i = 0; i < waysToWin.length; i++) {
+  //     if (waysToWin[i].every((cell) => cell === "O")) {
+  //       setWinner("O");
+  //       break;
+  //     } else if (waysToWin[i].every((cell) => cell === "X")) {
+  //       setWinner("X");
+  //       break;
+  //     } else if (i === waysToWin.length - 1) {
+  //       checkDraw();
+  //     }
+  //   }
+  // };
+
   const checkDraw = () => {
-    if (board.every((cell) => cell !== " ")) {
-      console.log("hey checkdraw?");
+    if (board.every((cell) => cell !== "") && winner === null) {
       setWinner("D");
     }
   };
+  checkDraw();
+
   //only call winner when state has changed
   useEffect(checkWinner, [board]);
 
