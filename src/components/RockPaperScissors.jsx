@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/rockpaperscissors.css";
+import "../styles/rockPaperScissors.css";
 import paper from "../images/paper.png";
 import scissors from "../images/scissors.png";
 import rock from "../images/rock.png";
@@ -61,15 +61,15 @@ function RockPaperScissors() {
         <div className="container_psr_options">
           <div className="psr_options" onClick={rockOption}>
             <div className="title_psr_option">Rock</div>
-            <img src={rock} alt="rock" />
+            <img className="img-rps" src={rock} alt="rock" />
           </div>
           <div className="psr_options" onClick={paperOption}>
             <div className="title_psr_option">Paper</div>
-            <img src={paper} alt="paper" />
+            <img className="img-rps" src={paper} alt="paper" />
           </div>
           <div className="psr_options" onClick={scissorsOption}>
             <div className="title_psr_option">Scissors</div>
-            <img src={scissors} alt="scissors" />
+            <img className="img-rps" src={scissors} alt="scissors" />
           </div>
         </div>
         <div className="container_option">
