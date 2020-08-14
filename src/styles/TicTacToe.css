@@ -52,14 +52,3 @@
 .winner-message span.D {
   color: #8ac926;
 }
-
-button {
-  padding: 1.5rem 2rem;
-  border: none;
-  border-radius: 5px;
-  box-shadow: 0 1px 3px 0 grey;
-  background-color: #8ac926;
-  color: white;
-  font-size: 2rem;
-  font-weight: bold;
-}

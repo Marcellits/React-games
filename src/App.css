@@ -16,12 +16,25 @@ body {
 
 .title {
   text-align: center;
-  font-size: 3rem;
+  font-size: 4rem;
   color: #555;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 }
 .App {
   text-align: center;
+}
+
+button {
+  padding: 1.5rem 2rem;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px 0 grey;
+  background-color: #8ac926;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  outline-style: none;
+  cursor: pointer;
 }
 
 .App-logo {
