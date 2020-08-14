@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../styles/rockpaperscissors.css";
 import paper from "../images/paper.png";
 import scissors from "../images/scissors.png";
@@ -26,76 +26,96 @@ function RockPaperScissors() {
   };
 
   function result() {
-    if (userOption === "rock" && computerOption === "rock") {
-      setWinner("draw");
-    } else if (userOption === "rock" && computerOption === "paper") {
-      setWinner("computer");
-    } else if (userOption === "rock" && computerOption === "scissors") {
-      setWinner("you");
-    } else if (userOption === "paper" && computerOption === "paper") {
-      setWinner("draw");
-    } else if (userOption === "paper" && computerOption === "scissors") {
-      setWinner("computer");
-    } else if (userOption === "paper" && computerOption === "rock") {
-      setWinner("you");
-    } else if (userOption === "scissors" && computerOption === "scissors") {
-      setWinner("draw");
-    } else if (userOption === "scissors" && computerOption === "rock") {
-      setWinner("computer");
-    } else if (userOption === "scissors" && computerOption === "paper") {
-      setWinner("you");
-    }
-    console.log(computerOption); //see value of computerOption
+    setTimeout(() => {
+      if (userOption === "rock" && computerOption === "rock") {
+        setWinner("Draw");
+      } else if (userOption === "rock" && computerOption === "paper") {
+        setWinner("Computer");
+      } else if (userOption === "rock" && computerOption === "scissors") {
+        setWinner("You");
+      } else if (userOption === "paper" && computerOption === "paper") {
+        setWinner("Draw");
+      } else if (userOption === "paper" && computerOption === "scissors") {
+        setWinner("Computer");
+      } else if (userOption === "paper" && computerOption === "rock") {
+        setWinner("You");
+      } else if (userOption === "scissors" && computerOption === "scissors") {
+        setWinner("Draw");
+      } else if (userOption === "scissors" && computerOption === "rock") {
+        setWinner("Computer");
+      } else if (userOption === "scissors" && computerOption === "paper") {
+        setWinner("You");
+      }
+    }, 1000);
   }
-  const playAgain = () => {
-    window.location.reload(false);
+  const resetGame = () => {
+    setUserOption(null);
+    setComputerOption(null);
+    setWinner(null);
   };
 
   return (
     <div>
       <h1 className="title">Rock Paper Scissors</h1>
       <div>
-        Choose one!
         <div className="container_psr_options">
-          <div className="psr_option" onClick={rockOption}>
+          <div className="psr_options" onClick={rockOption}>
             <div className="title_psr_option">Rock</div>
             <img src={rock} alt="rock" />
           </div>
-          <div className="psr_option" onClick={paperOption}>
+          <div className="psr_options" onClick={paperOption}>
             <div className="title_psr_option">Paper</div>
             <img src={paper} alt="paper" />
           </div>
-          <div className="psr_option" onClick={scissorsOption}>
+          <div className="psr_options" onClick={scissorsOption}>
             <div className="title_psr_option">Scissors</div>
             <img src={scissors} alt="scissors" />
           </div>
+        </div>
+        <div className="container_option">
+          {userOption === null ? <div className="versus">PICK ONE!</div> : ""}
           {userOption && (
-            <div className="userOption">
-              <div className="option" id={userOption}>
-                <div id={`option_${userOption}`}>You pick : {userOption}!</div>
-                {winner === null ? (
-                  <button onClick={result}>Play!</button>
-                ) : (
-                  <button onClick={playAgain}>Play Again</button>
-                )}
-              </div>
+            <div className="userOption option">
+              <div className="text_option">YOU</div>
+              <div
+                className={`invert_user_hand_${userOption}`}
+                id={`option_${userOption}`}
+              ></div>
             </div>
           )}
           {winner && (
-            <div>
-              <div>COMPUTER: {computerOption}</div>
+            <div className="computerOption option">
+              <div className="text_option"> ROBOT</div>
+              <div
+                className={`invert_hand_${computerOption}`}
+                id={`option_${computerOption}`}
+              ></div>
             </div>
           )}
-          {winner &&
-            (winner === "draw" ? (
-              <h2 className="winner-message">
-                <span className={winner}>Draw!</span>
-              </h2>
-            ) : (
-              <h2 className="winner-message">
-                <span className={winner}>{winner}</span> Won!
-              </h2>
-            ))}
+        </div>
+        <div>
+          <div className="winner_center">
+            {winner &&
+              (winner === "Draw" ? (
+                <h2 className="winner_message_rps">
+                  <span className={winner}>Draw!</span>
+                </h2>
+              ) : (
+                <h2 className="winner_message_rps">
+                  <span className={winner}>{winner}</span> Won!
+                </h2>
+              ))}
+            {userOption &&
+              (winner === null ? (
+                <button className="button-rps" onClick={result}>
+                  Play!
+                </button>
+              ) : (
+                <button className="button-rps" onClick={resetGame}>
+                  Play Again
+                </button>
+              ))}
+          </div>
         </div>
       </div>
     </div>

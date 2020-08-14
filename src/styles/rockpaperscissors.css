@@ -2,49 +2,109 @@
   display: grid;
   grid-template-columns: repeat(3, 300px);
   gap: 2rem;
+  justify-content: center;
 }
-.psr_option {
+.psr_options {
   display: grid;
   align-items: center;
   justify-content: center;
   border-radius: 5px;
   font-size: 1rem;
-  color: rgb(33, 33, 38);
+  color: white;
+  /* color: rgb(33, 33, 38); */
   cursor: pointer;
-  height: 25vh;
-  background-color: rgb(67, 206, 252);
+  height: 240px;
+  background-color: rgb(170, 84, 232);
 }
 .title_psr_option {
   padding: 20px;
   text-align: center;
   font-size: 40px;
 }
-.psr_option:hover {
+.psr_options:hover {
   box-shadow: 1px 1px 10px grey;
 }
 
 img {
   display: table-cell;
   vertical-align: top;
-  height: 15vh;
-  padding: 20px;
+  height: 140px;
+  padding-bottom: 20px;
 }
+
+.invert_user_hand_rock,
+.invert_hand_scissors,
+.invert_hand_paper {
+  transform: scaleX(-1);
+}
+
 #option_rock {
   background: url("../images/rock.png");
-  /* background-color: rgb(67, 206, 252); */
+  background-size: cover;
+  height: 345px;
+  width: auto;
+  margin: 10px 0px;
 }
-#paper {
+#option_paper {
+  background: url("../images/paper.png");
+  background-size: cover;
+  height: 355px;
+  width: auto;
+  margin: 10px 0px;
+}
+#option_scissors {
+  background: url("../images/scissors.png");
+  background-size: cover;
+  height: 295px;
+  width: auto;
+  margin: 40px 0px;
+}
+
+.container_option {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  text-align: center;
+  margin-top: 40px;
+  vertical-align: middle;
+}
+
+.userOption {
   background-color: yellow;
 }
-#scissors {
-  background-color: rgb(255, 38, 0);
+.computerOption {
+  background-color: rgb(67, 206, 252);
 }
+
 .option {
-  display: grid;
   align-items: center;
   justify-content: center;
   border-radius: 5px;
   font-size: 1rem;
   color: rgb(33, 33, 38);
-  height: 25vh;
+  height: 30vh;
+  display: block;
+  height: auto;
+  width: 500px;
+  padding: 40px;
+}
+.text_option {
+  font-size: 45px;
+  font-weight: bolder;
+}
+.versus {
+  font-size: 5rem;
+  margin: 210px 50px;
+}
+
+.winner_message_rps {
+  justify-content: center;
+  margin: 2rem;
+  font-size: 3rem;
+}
+.winner_center {
+  text-align: center;
+}
+.button-rps {
+  margin: 20px;
 }
