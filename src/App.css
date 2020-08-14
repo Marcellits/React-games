@@ -22,6 +22,7 @@ body {
 }
 .App {
   text-align: center;
+  font-size: 5rem;
 }
 
 button {
@@ -40,4 +41,25 @@ button {
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+#react-logo {
+  height: 200px;
+  padding-bottom: 20px;
+}
+
+#tttoe_game {
+  height: 500px;
+  padding-bottom: 20px;
+}
+#rps_game {
+  height: 400px;
+  padding-bottom: 20px;
+}
+.container_games {
+  display: grid;
+  grid-template-columns: repeat(2, 600px);
+}
+.games {
+  text-align: center;
 }

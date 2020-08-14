@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../styles/TicTacToe.css";
+import "../styles/ticTacToe.css";
 
 function TicTacToe() {
   const emptyBoard = ["", "", "", "", "", "", "", "", ""];

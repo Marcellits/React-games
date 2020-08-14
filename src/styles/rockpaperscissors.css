@@ -25,7 +25,7 @@
   box-shadow: 1px 1px 10px grey;
 }
 
-img {
+.img-rps {
   display: table-cell;
   vertical-align: top;
   height: 140px;
