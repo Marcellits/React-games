@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/rockPaperScissors.css";
+import "../styles/RPS.css";
 import paper from "../images/paper.png";
 import scissors from "../images/scissors.png";
 import rock from "../images/rock.png";
