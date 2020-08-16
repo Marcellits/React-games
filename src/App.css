@@ -9,30 +9,30 @@ body {
   align-items: center;
   justify-content: center;
   font-family: sans-serif;
-  height: 100vh;
   background-color: #eee;
   color: #555;
 }
 
 .title {
   text-align: center;
-  font-size: 4rem;
+  font-size: 3rem;
   color: #555;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 .App {
   text-align: center;
-  font-size: 5rem;
+  font-size: 3rem;
+  width: 100vw;
 }
 
 button {
-  padding: 1.5rem 2rem;
+  padding: 1rem 1.5rem;
   border: none;
   border-radius: 5px;
   box-shadow: 0 1px 3px 0 grey;
   background-color: #8ac926;
   color: white;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   outline-style: none;
   cursor: pointer;
@@ -44,13 +44,13 @@ button {
 }
 
 #react-logo {
-  height: 200px;
-  padding-bottom: 20px;
+  height: 150px;
 }
 
 #tttoe_game,
 #rps_game {
-  height: 500px;
+  display: grid;
+  height: 300px;
   padding-bottom: 20px;
   margin-top: 30px;
 }
@@ -79,11 +79,11 @@ a {
   font-size: 40px;
 }
 .title_header {
-  font-size: 80px;
+  font-size: 60px;
 }
 
 .navbar-brand {
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .navbar {
@@ -93,4 +93,9 @@ a {
 .navbar-brand:hover {
   border-bottom: 1px solid;
   text-decoration: none;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

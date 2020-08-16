@@ -4,7 +4,7 @@
   justify-content: center;
   background-color: white;
   border-radius: 5px;
-  font-size: 9rem;
+  font-size: 6rem;
   color: #00000066;
   cursor: pointer;
 }
@@ -14,9 +14,10 @@
 
 .board {
   display: grid;
-  grid-template-columns: repeat(3, 240px);
-  grid-template-rows: repeat(3, 240px);
-  gap: 2rem;
+  grid-template-columns: repeat(3, 160px);
+  grid-template-rows: repeat(3, 160px);
+  gap: 1rem;
+  justify-content: center;
 }
 
 .board.game-over {

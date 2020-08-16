@@ -9,13 +9,13 @@ function Home() {
     <div className="App">
       <div className="header">
         <img id="react-logo" src={react_logo} alt="React logo" />
-        <h1 className="title_header">Welcome to React Games!</h1>
+        <h1 className="title_header">Welcome to React SuperGames!</h1>
       </div>
 
       <div className="container_games">
         <div className="games">
           <Link className="title title_game_home" to="/tictactoe">
-            Tic Tac Toe
+            <h2>Tic Tac Toe</h2>
             <img
               id="tttoe_game"
               src={tictactoe_game}
@@ -25,7 +25,8 @@ function Home() {
         </div>
         <div className="games">
           <Link className="title title_game_home" to="/paperscissorsrock">
-            Paper Scissors Rock
+            <h2>Paper Scissors Rock</h2>
+
             <img id="rps_game" src={rps_game} alt="Rock paper scissors" />
           </Link>
         </div>
