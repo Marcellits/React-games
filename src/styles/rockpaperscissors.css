@@ -1,7 +1,7 @@
 .container_psr_options {
   display: grid;
-  grid-template-columns: repeat(3, 300px);
-  gap: 2rem;
+  grid-template-columns: repeat(3, 250px);
+  grid-gap: 2rem;
   justify-content: center;
 }
 .psr_options {
@@ -11,7 +11,6 @@
   border-radius: 5px;
   font-size: 1rem;
   color: white;
-  /* color: rgb(33, 33, 38); */
   cursor: pointer;
   height: 240px;
   background-color: rgb(170, 84, 232);
@@ -41,21 +40,21 @@
 #option_rock {
   background: url("../images/rock.png");
   background-size: cover;
-  height: 345px;
+  height: 295px;
   width: auto;
   margin: 10px 0px;
 }
 #option_paper {
   background: url("../images/paper.png");
   background-size: cover;
-  height: 355px;
+  height: 305px;
   width: auto;
   margin: 10px 0px;
 }
 #option_scissors {
   background: url("../images/scissors.png");
   background-size: cover;
-  height: 295px;
+  height: 255px;
   width: auto;
   margin: 40px 0px;
 }
@@ -82,11 +81,11 @@
   border-radius: 5px;
   font-size: 1rem;
   color: rgb(33, 33, 38);
-  height: 30vh;
+  /* height: 30px; */
   display: block;
   height: auto;
-  width: 500px;
-  padding: 40px;
+  width: 400px;
+  padding: 20px;
 }
 .text_option {
   font-size: 45px;

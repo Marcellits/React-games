@@ -48,18 +48,49 @@ button {
   padding-bottom: 20px;
 }
 
-#tttoe_game {
+#tttoe_game,
+#rps_game {
   height: 500px;
   padding-bottom: 20px;
-}
-#rps_game {
-  height: 400px;
-  padding-bottom: 20px;
+  margin-top: 30px;
 }
 .container_games {
   display: grid;
   grid-template-columns: repeat(2, 600px);
+  justify-content: center;
+  margin-top: 30px;
 }
 .games {
   text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+.header {
+  background-color: #555;
+  color: #eee;
+  width: 100vw;
+  padding: 40px;
+
+  margin: 20px auto;
+}
+.title_game_home {
+  font-size: 40px;
+}
+.title_header {
+  font-size: 80px;
+}
+
+.navbar-brand {
+  font-size: 30px;
+}
+
+.navbar {
+  justify-content: flex-end;
+}
+
+.navbar-brand:hover {
+  border-bottom: 1px solid;
+  text-decoration: none;
 }

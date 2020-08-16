@@ -82,34 +82,36 @@ function TicTacToe() {
   };
 
   return (
-    <div>
-      <h1 className="title">Tic Tac Toe</h1>
-      <div class={`board ${winner ? "game-over" : ""}`}>
-        {board.map((item, index) => (
-          <div
-            key={index}
-            className={`cell ${item}`}
-            onClick={() => handleClick(index)}
-          >
-            {item}
-          </div>
-        ))}
-      </div>
-      {winner && (
-        <div className="footer">
-          {winner === "D" ? (
-            <h2 className="winner-message">
-              <span className={winner}>Draw!</span>
-            </h2>
-          ) : (
-            <h2 className="winner-message">
-              <span className={winner}>{winner}</span> Won!
-            </h2>
-          )}
-
-          <button onClick={resetGame}>Play Again!</button>
+    <div className="App">
+      <div>
+        <h1 className="title">Tic Tac Toe</h1>
+        <div class={`board ${winner ? "game-over" : ""}`}>
+          {board.map((item, index) => (
+            <div
+              key={index}
+              className={`cell ${item}`}
+              onClick={() => handleClick(index)}
+            >
+              {item}
+            </div>
+          ))}
         </div>
-      )}
+        {winner && (
+          <div className="footer">
+            {winner === "D" ? (
+              <h2 className="winner-message">
+                <span className={winner}>Draw!</span>
+              </h2>
+            ) : (
+              <h2 className="winner-message">
+                <span className={winner}>{winner}</span> Won!
+              </h2>
+            )}
+
+            <button onClick={resetGame}>Play Again!</button>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
