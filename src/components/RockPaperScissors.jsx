@@ -55,66 +55,68 @@ function RockPaperScissors() {
   };
 
   return (
-    <div>
-      <h1 className="title">Rock Paper Scissors</h1>
+    <div className="App">
       <div>
-        <div className="container_psr_options">
-          <div className="psr_options" onClick={rockOption}>
-            <div className="title_psr_option">Rock</div>
-            <img className="img-rps" src={rock} alt="rock" />
-          </div>
-          <div className="psr_options" onClick={paperOption}>
-            <div className="title_psr_option">Paper</div>
-            <img className="img-rps" src={paper} alt="paper" />
-          </div>
-          <div className="psr_options" onClick={scissorsOption}>
-            <div className="title_psr_option">Scissors</div>
-            <img className="img-rps" src={scissors} alt="scissors" />
-          </div>
-        </div>
-        <div className="container_option">
-          {userOption === null ? <div className="versus">PICK ONE!</div> : ""}
-          {userOption && (
-            <div className="userOption option">
-              <div className="text_option">YOU</div>
-              <div
-                className={`invert_user_hand_${userOption}`}
-                id={`option_${userOption}`}
-              ></div>
-            </div>
-          )}
-          {winner && (
-            <div className="computerOption option">
-              <div className="text_option"> ROBOT</div>
-              <div
-                className={`invert_hand_${computerOption}`}
-                id={`option_${computerOption}`}
-              ></div>
-            </div>
-          )}
-        </div>
+        <h1 className="title">Rock Paper Scissors</h1>
         <div>
-          <div className="winner_center">
-            {winner &&
-              (winner === "Draw" ? (
-                <h2 className="winner_message_rps">
-                  <span className={winner}>Draw!</span>
-                </h2>
-              ) : (
-                <h2 className="winner_message_rps">
-                  <span className={winner}>{winner}</span> Won!
-                </h2>
-              ))}
-            {userOption &&
-              (winner === null ? (
-                <button className="button-rps" onClick={result}>
-                  Play!
-                </button>
-              ) : (
-                <button className="button-rps" onClick={resetGame}>
-                  Play Again
-                </button>
-              ))}
+          <div className="container_psr_options">
+            <div className="psr_options" onClick={rockOption}>
+              <div className="title_psr_option">Rock</div>
+              <img className="img-rps" src={rock} alt="rock" />
+            </div>
+            <div className="psr_options" onClick={paperOption}>
+              <div className="title_psr_option">Paper</div>
+              <img className="img-rps" src={paper} alt="paper" />
+            </div>
+            <div className="psr_options" onClick={scissorsOption}>
+              <div className="title_psr_option">Scissors</div>
+              <img className="img-rps" src={scissors} alt="scissors" />
+            </div>
+          </div>
+          <div className="container_option">
+            {userOption === null ? <div className="versus">PICK ONE!</div> : ""}
+            {userOption && (
+              <div className="userOption option">
+                <div className="text_option">YOU</div>
+                <div
+                  className={`invert_user_hand_${userOption}`}
+                  id={`option_${userOption}`}
+                ></div>
+              </div>
+            )}
+            {winner && (
+              <div className="computerOption option">
+                <div className="text_option"> ROBOT</div>
+                <div
+                  className={`invert_hand_${computerOption}`}
+                  id={`option_${computerOption}`}
+                ></div>
+              </div>
+            )}
+          </div>
+          <div>
+            <div className="winner_center">
+              {winner &&
+                (winner === "Draw" ? (
+                  <h2 className="winner_message_rps">
+                    <span className={winner}>Draw!</span>
+                  </h2>
+                ) : (
+                  <h2 className="winner_message_rps">
+                    <span className={winner}>{winner}</span> Won!
+                  </h2>
+                ))}
+              {userOption &&
+                (winner === null ? (
+                  <button className="button-rps" onClick={result}>
+                    Play!
+                  </button>
+                ) : (
+                  <button className="button-rps" onClick={resetGame}>
+                    Play Again
+                  </button>
+                ))}
+            </div>
           </div>
         </div>
       </div>
