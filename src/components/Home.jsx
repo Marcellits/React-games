@@ -25,7 +25,7 @@ function Home() {
         </div>
         <div className="games">
           <Link className=" title_game_home" to="/rockpaperscissors">
-            <h2>Paper Scissors Rock</h2>
+            <h2>Rock Paper Scissors </h2>
 
             <img id="rps_game" src={rps_game} alt="Rock paper scissors" />
           </Link>
