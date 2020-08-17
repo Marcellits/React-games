@@ -74,7 +74,11 @@ function RockPaperScissors() {
             </div>
           </div>
           <div className="container_option">
-            {userOption === null ? <div className="versus">PICK ONE!</div> : ""}
+            {userOption === null ? (
+              <div className="pick_one">PICK ONE!</div>
+            ) : (
+              ""
+            )}
             {userOption && (
               <div className="userOption option">
                 <div className="text_option">YOU</div>

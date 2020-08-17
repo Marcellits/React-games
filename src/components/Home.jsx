@@ -14,7 +14,7 @@ function Home() {
 
       <div className="container_games">
         <div className="games">
-          <Link className="title title_game_home" to="/tictactoe">
+          <Link className="title_game_home" to="/tictactoe">
             <h2>Tic Tac Toe</h2>
             <img
               id="tttoe_game"
@@ -24,7 +24,7 @@ function Home() {
           </Link>
         </div>
         <div className="games">
-          <Link className="title title_game_home" to="/rockpaperscissors">
+          <Link className=" title_game_home" to="/rockpaperscissors">
             <h2>Paper Scissors Rock</h2>
 
             <img id="rps_game" src={rps_game} alt="Rock paper scissors" />
