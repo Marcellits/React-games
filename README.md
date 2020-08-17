@@ -1,7 +1,7 @@
 # React SuperGames!
 
 **_Description_**.  
-This frontend project is an web application with well known games: TIC TAC TOE, PAPER SCISSORS ROCK and SNAKE. All of them are built using JavaScript + REACT.
+This frontend project is an web application with well known games: TIC TAC TOE, PAPER SCISSORS ROCK and SNAKE (Snake still is being developed). All of them are built using JavaScript + REACT.
 
 ### Installation
 
