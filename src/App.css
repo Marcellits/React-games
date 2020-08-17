@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Baloo Tamma 2", cursive;
 }
 
 body {
@@ -37,9 +38,6 @@ button {
   cursor: pointer;
 }
 
-.navbar-brand {
-  color: rgb(93, 188, 210);
-}
 .a:hover {
   text-decoration: none;
 }
@@ -50,7 +48,8 @@ button {
 }
 
 #react-logo {
-  height: 150px;
+  height: 90px;
+  margin: 0px 10px;
 }
 
 #tttoe_game,
@@ -74,18 +73,20 @@ a {
   text-decoration: none;
 }
 .header {
-  background-color: #555;
-  color: #eee;
+  display: flex;
+  align-items: center;
+  background-color: rgb(110, 211, 233);
+  color: rgb(53, 52, 52);
   width: 100vw;
   padding: 40px;
-
-  margin: 20px auto;
+  justify-content: center;
 }
 .title_game_home {
   font-size: 40px;
 }
 .title_header {
   font-size: 60px;
+  margin-bottom: -10px;
 }
 
 .navbar-brand {
