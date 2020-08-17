@@ -38,7 +38,7 @@ button {
   cursor: pointer;
 }
 
-.a:hover {
+.h2:hover {
   text-decoration: none;
 }
 
@@ -61,15 +61,17 @@ button {
 }
 .container_games {
   display: grid;
-  grid-template-columns: repeat(2, 600px);
+  grid-template-columns: repeat(2, 300px);
+  grid-gap: 50px;
   justify-content: center;
   margin-top: 30px;
 }
 .games {
   text-align: center;
+  height: 300px;
 }
 
-a {
+Link {
   text-decoration: none;
 }
 .header {
@@ -105,4 +107,30 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    display: grid;
+    padding: 20px;
+  }
+  .title_header {
+    font-size: 23px;
+  }
+  #react-logo {
+    height: 60px;
+    margin: auto;
+  }
+  #tttoe_game,
+  #rps_game {
+    display: grid;
+    height: 280px;
+    padding-bottom: 50px;
+  }
+  .container_games {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 270px));
+    grid-gap: 50px;
+    justify-content: center;
+  }
 }
