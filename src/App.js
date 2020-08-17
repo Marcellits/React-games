@@ -16,8 +16,12 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
-            <Route path="/tictactoe" component={TicTacToe} />
-            <Route path="/rockpaperscissors" component={RockPaperScissors} />
+            <Route path="/tictactoe">
+              <TicTacToe />
+            </Route>
+            <Route path="/rockpaperscissors">
+              <RockPaperScissors />
+            </Route>
           </Switch>
         </Router>
       </div>

@@ -34,10 +34,10 @@ const Navbar = () => {
               Play
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="/rockpaperscissors">
+              <a class="dropdown-item" href="rockpaperscissors">
                 Rock Paper Scissors
               </a>
-              <a class="dropdown-item" href="/tictactoe">
+              <a class="dropdown-item" href="tictactoe">
                 Tic Tac Toe
               </a>
               <a

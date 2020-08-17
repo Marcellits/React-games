@@ -59,16 +59,16 @@ function RockPaperScissors() {
       <div>
         <h1 className="title">Rock Paper Scissors</h1>
         <div>
-          <div className="container_psr_options">
-            <div className="psr_options" onClick={rockOption}>
+          <div className={`container_psr_options`}>
+            <div className="psr_options" onClick={winner ? "" : rockOption}>
               <div className="title_psr_option">Rock</div>
               <img className="img-rps" src={rock} alt="rock" />
             </div>
-            <div className="psr_options" onClick={paperOption}>
+            <div className="psr_options" onClick={winner ? "" : paperOption}>
               <div className="title_psr_option">Paper</div>
               <img className="img-rps" src={paper} alt="paper" />
             </div>
-            <div className="psr_options" onClick={scissorsOption}>
+            <div className="psr_options" onClick={winner ? "" : scissorsOption}>
               <div className="title_psr_option">Scissors</div>
               <img className="img-rps" src={scissors} alt="scissors" />
             </div>
