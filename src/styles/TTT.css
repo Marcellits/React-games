@@ -14,8 +14,8 @@
 
 .board {
   display: grid;
-  grid-template-columns: repeat(3, 160px);
-  grid-template-rows: repeat(3, 160px);
+  grid-template-columns: repeat(3, 140px);
+  grid-template-rows: repeat(3, 140px);
   gap: 1rem;
   justify-content: center;
 }
@@ -42,7 +42,7 @@
   text-align: center;
 }
 .winner-message {
-  margin: 2rem;
+  margin: 1rem;
 }
 .winner-message span.O {
   color: #1982c4;

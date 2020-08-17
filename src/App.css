@@ -17,16 +17,15 @@ body {
   text-align: center;
   font-size: 3rem;
   color: #555;
-  margin-bottom: 3rem;
+  margin: 2rem;
 }
 .App {
   text-align: center;
-  font-size: 3rem;
   width: 100vw;
 }
 
 button {
-  padding: 1rem 1.5rem;
+  padding: 0.7rem 1.2rem;
   border: none;
   border-radius: 5px;
   box-shadow: 0 1px 3px 0 grey;
@@ -36,6 +35,13 @@ button {
   font-weight: bold;
   outline-style: none;
   cursor: pointer;
+}
+
+.navbar-brand {
+  color: rgb(93, 188, 210);
+}
+.a:hover {
+  text-decoration: none;
 }
 
 .App-logo {

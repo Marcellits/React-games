@@ -1,6 +1,6 @@
 .container_psr_options {
   display: grid;
-  grid-template-columns: repeat(3, 200px);
+  grid-template-columns: repeat(3, 130px);
   grid-gap: 1.5rem;
   justify-content: center;
 }
@@ -12,12 +12,12 @@
   font-size: 1rem;
   color: white;
   cursor: pointer;
-  height: 155px;
+  height: 90px;
   background-color: rgb(170, 84, 232);
 }
 .title_psr_option {
   text-align: center;
-  font-size: 35px;
+  font-size: 24px;
 }
 .psr_options:hover {
   box-shadow: 1px 1px 10px grey;
@@ -26,8 +26,8 @@
 .img-rps {
   display: table-cell;
   vertical-align: top;
-  height: 80px;
-  padding-bottom: 10px;
+  height: 50px;
+  padding-bottom: 8px;
 }
 
 .invert_user_hand_rock,
@@ -39,23 +39,23 @@
 #option_rock {
   background: url("../images/rock.png");
   background-size: cover;
-  height: 246px;
+  height: 212px;
   width: auto;
   margin: 5px 0px;
 }
 #option_paper {
   background: url("../images/paper.png");
   background-size: cover;
-  height: 257px;
+  height: 220px;
   width: auto;
   margin: 5px 0px;
 }
 #option_scissors {
   background: url("../images/scissors.png");
   background-size: cover;
-  height: 212px;
+  height: 183px;
   width: auto;
-  margin: 30px 0px;
+  margin: 20px 0px;
 }
 
 .container_option {
@@ -82,11 +82,11 @@
   color: rgb(33, 33, 38);
   display: block;
   height: auto;
-  width: 340px;
+  width: 300px;
   padding: 20px;
 }
 .text_option {
-  font-size: 45px;
+  font-size: 30px;
   font-weight: bolder;
 }
 .versus {
@@ -96,8 +96,8 @@
 
 .winner_message_rps {
   justify-content: center;
-  margin: 1rem;
-  font-size: 3rem;
+  margin-top: 1rem;
+  font-size: 2.5rem;
 }
 .winner_center {
   text-align: center;
