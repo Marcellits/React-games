@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../App.css";
 
 const Navbar = () => {
@@ -22,7 +23,7 @@ const Navbar = () => {
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li className="nav-item dropdown">
-            <a
+            <Link
               className="nav-link dropdown-toggle"
               href="/"
               id="navbarDropdown"
@@ -32,14 +33,14 @@ const Navbar = () => {
               aria-expanded="false"
             >
               Play
-            </a>
+            </Link>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="rockpaperscissors">
+              <Link class="dropdown-item" to="/rockpaperscissors">
                 Rock Paper Scissors
-              </a>
-              <a class="dropdown-item" href="tictactoe">
+              </Link>
+              <Link class="dropdown-item" to="/tictactoe">
                 Tic Tac Toe
-              </a>
+              </Link>
               <a
                 class="nav-link disabled"
                 href="/snake"
