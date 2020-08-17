@@ -17,7 +17,7 @@ function App() {
               <Home />
             </Route>
             <Route path="/tictactoe" component={TicTacToe} />
-            <Route path="/paperscissorsrock" component={RockPaperScissors} />
+            <Route path="/rockpaperscissors" component={RockPaperScissors} />
           </Switch>
         </Router>
       </div>
