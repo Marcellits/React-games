@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import react_logo from "../images/logo512.png";
+import react_logo from "../images/reactLogo.png";
 import tictactoe_game from "../images/tictactoe-game.png";
 import rps_game from "../images/rps-game.png";
 
