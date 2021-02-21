@@ -7,7 +7,7 @@ import RockPaperScissors from "./components/RockPaperScissors.jsx";
 import Navbar from "./components/Navbar";
 import TicTacToeOnePlayer from "./components/TicTacToeOnePlayer.js";
 import TicTacToeTwoPlayers from "./components/TicTacToeTwoPlayers.js";
-
+import SnakeGame from "./components/SnakeGame.jsx"
 
 function App() {
   return (
@@ -30,6 +30,9 @@ function App() {
             </Route>
             <Route path="/rockpaperscissors">
               <RockPaperScissors />
+            </Route>
+            <Route path="/snake-game">
+              < SnakeGame />
             </Route>
           </Switch>
         </Router>
