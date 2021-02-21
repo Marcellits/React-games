@@ -41,14 +41,9 @@ const Navbar = () => {
               <Link className="dropdown-item" to="/tictactoe">
                 Tic Tac Toe
               </Link>
-              <a
-                className="nav-link disabled"
-                href="/snake"
-                tabIndex="-1"
-                aria-disabled="true"
-              >
-                Snake
-              </a>
+              <Link className="dropdown-item" to="/snake-game">
+                Snake Game
+              </Link>
             </div>
           </li>
         </ul>
