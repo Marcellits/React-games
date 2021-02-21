@@ -4,12 +4,12 @@ import "../App.css";
 
 const Navbar = () => {
   return (
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-      <a class="navbar-brand" href="/">
+    <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
+      <a className="navbar-brand" href="/">
         React SuperGames!
       </a>
       <button
-        class="navbar-toggler"
+        className="navbar-toggler"
         type="button"
         data-toggle="collapse"
         data-target="#navbarSupportedContent"
@@ -17,15 +17,15 @@ const Navbar = () => {
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon"></span>
+        <span className="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
+      <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul className="navbar-nav mr-auto">
           <li className="nav-item dropdown">
             <Link
               className="nav-link dropdown-toggle"
-              href="/"
+              to="/"
               id="navbarDropdown"
               role="button"
               data-toggle="dropdown"
@@ -34,17 +34,17 @@ const Navbar = () => {
             >
               Play
             </Link>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <Link class="dropdown-item" to="/rockpaperscissors">
+            <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+              <Link className="dropdown-item" to="/rockpaperscissors">
                 Rock Paper Scissors
               </Link>
-              <Link class="dropdown-item" to="/tictactoe">
+              <Link className="dropdown-item" to="/tictactoe">
                 Tic Tac Toe
               </Link>
               <a
-                class="nav-link disabled"
+                className="nav-link disabled"
                 href="/snake"
-                tabindex="-1"
+                tabIndex="-1"
                 aria-disabled="true"
               >
                 Snake
