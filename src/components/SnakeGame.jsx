@@ -25,20 +25,46 @@ function SnakeGame (){
         setGameOver(false);
     }
     const endGame = () => {
+        setSpeed(null)
+        setGameOver(true)
 
     }
     const moveSnake = ({ keyCode }) => keyCode = 37 && keyCode <= 40 && setDir(DIRECTIONS[keyCode]);
     
 
-    const createDot = () => {
-
+    const createDot = () => 
+        dot.map((_, i) => Math.floor(Math.random() * (CANVAS_SIZE[i]/ SCALE)))
+    
+    const checkCollision = (piece, snk = snake) => {
+        //checking if snake is colliding in the wall 
+        if (
+            piece[0] * SCALE >= CANVAS_SIZE[0] ||
+            piece[0] < 0 ||
+            piece[1] * SCALE >= CANVAS_SIZE[1] ||
+            piece[1] < 0
+        )
+        return true;
+        //checking if the snake is colliding with itself
+        for(const segment of snk){
+            if (piece[0] === segment[0] && piece[1] === segment[1]) return true;
+        }
+            
+    return false
     }
-    const checkCollision = () => {
+    
 
+    const checkDotCollision = newSnake => {
+        if(newSnake[0][0] === dot[0] && newSnake[0][1] === dot[1]){
+            let newDot = createDot();
+            while (checkCollision(newDot, newSnake)) {
+                newDot = createDot()
+            }
+            setDot(newDot);
+            return true
+        }  
+        return false
     }
-    const checkDotCollision = () => {
 
-    }
     const gameLoop = () => {
         //making a copy of the snake (which is an array) 
         const snakeCopy = JSON.parse(JSON.stringify(snake));
@@ -46,8 +72,9 @@ function SnakeGame (){
         const newSnakeHead = [snakeCopy[0][0] + dir[0], snakeCopy[0][1] +dir[1]];
         //adding the new snake head in the array 
         snakeCopy.unshift(newSnakeHead)
+        if (checkCollision(newSnakeHead)) endGame();
+        if(!checkDotCollision(snakeCopy)) snakeCopy.pop()
         // removing the last element in the array , so it looks like moving
-        snakeCopy.pop();
         setSnake(snakeCopy);
     } 
 
@@ -76,8 +103,9 @@ function SnakeGame (){
                 height = {`${CANVAS_SIZE[1]}px`}
                 />
                 {gameOver && <div>Game Over</div>}
-                <button onClick={startGame}> Start Game</button>
-             </div>   
+                
+            </div>   
+            <button onClick={startGame}> Start Game</button>
         </div>
     )
 }
