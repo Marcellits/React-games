@@ -1,0 +1,10 @@
+.snakeboard {
+  background-color: white;
+  border-radius: 5px;
+  width: 90%;
+}
+.game_over_message {
+  justify-content: center;
+  margin-top: 1rem;
+  font-size: 2.5rem;
+}

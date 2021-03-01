@@ -6,8 +6,7 @@ import {
     DOT_START, 
     SCALE, SPEED, 
     DIRECTIONS} from '../utils/snakeConstants'
-
-
+import "../styles/Snake.css"
 
 function SnakeGame (){
     const canvasRef = useRef()
@@ -96,15 +95,15 @@ function SnakeGame (){
              <h1 className="title">Snake Game</h1>
             </div>
             <div>
-                <canvas
-                style = {{ border :"1px solid black"}}
+                <canvas className ="snakeboard"
                 ref={canvasRef}
                 width = {`${CANVAS_SIZE[0]}px`}
                 height = {`${CANVAS_SIZE[1]}px`}
                 />
-                {gameOver && <div>Game Over</div>}
-                
-            </div>   
+            </div>  
+            <h2 className="game_over_message">
+            {gameOver && <div>Game Over</div>}
+            </h2> 
             <button onClick={startGame}> Start Game</button>
         </div>
     )
