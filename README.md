@@ -18,12 +18,3 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 ### Do you wanna play?
 
 https://react-supergames.netlify.app/
-
-# teste squash 3
-
-aaaaaa
-BBBBBB
-C+C+C+C+C
-DDD
-EEEEE
-ggg
