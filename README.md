@@ -21,10 +21,9 @@ https://react-supergames.netlify.app/
 
 # teste squash 3
 
-AAAAAA
+aaaaaa
 BBBBBB
-b=b=b=b=b
 C+C+C+C+C
 DDD
-
-EEEEEEEEE
+EEEEE
+ggg
