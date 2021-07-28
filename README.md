@@ -15,6 +15,11 @@ install react-router-dom
 Runs the app in the development mode.  
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-
 ### Do you wanna play?
+
 https://react-supergames.netlify.app/
+
+# teste squash 3
+
+AAAAAA
+bbbbbb
