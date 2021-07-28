@@ -22,7 +22,5 @@ https://react-supergames.netlify.app/
 ## adding some squash content here
 
 AAAAAAAA
-++++++++
+BBBBBBB
 CCCCCCC
-ddddddddd
-EEEEEEEEEEEE
